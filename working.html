@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How the App Works</title>
+    <style>
+        /* Your custom styles for this page */
+
+        .blob-container {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            width: 450px;  /* Smaller size */
+            height: 450px; /* Smaller size */
+            transform: translate(-50%, -50%);
+            z-index: -1;
+            opacity: 5.8;
+            filter: blur(10px); /* Increased blur effect */
+        }
+
+        .blob-svg {
+            width: 100%;
+            height: 100%;
+            animation: blobChange 25s ease-in-out infinite;  /* Changed to smooth shape change */
+        }
+
+        @keyframes blobChange {
+            0%, 100% { transform: scale(1) skew(10deg, 10deg); }
+            25% { transform: scale(1.05) skew(5deg, -5deg); }
+            50% { transform: scale(1.1) skew(0deg, 0deg); }
+            75% { transform: scale(1.05) skew(-5deg, 5deg); }
+        }
+
+
+        body {
+            background-color: #030712;
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .how-it-works {
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .how-it-works h1 {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .steps-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .step {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+        }
+
+        .step img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .step h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .step p {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .btn {
+            padding: 12px 30px;
+            border-radius: 25px;
+            background-color: #004080;
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: 3rem;
+            display: inline-block;
+            font-size: 1rem;
+        }
+
+        .btn:hover {
+            background-color: #0050b3;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+
+        <div class="blob-container">
+        <svg class="blob-svg" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" style="stop-color:rgb(148, 0, 255)"></stop>
+                    <stop offset="100%" style="stop-color:rgb(255, 32, 78)"></stop>
+                </linearGradient>
+            </defs>
+            <path fill="url(#gradient)">
+                <animate attributeName="d" dur="100000ms" repeatCount="indefinite" values="M423,303.5Q416,357,369.5,383.5Q323,410,272.5,428.5Q222,447,183.5,409Q145,371,101,339Q57,307,41,245.5Q25,184,77,147.5Q129,111,175.5,82Q222,53,287.5,39Q353,25,393.5,78.5Q434,132,432,191Q430,250,423,303.5Z;  M425.5,306Q424,362,373.5,386.5Q323,411,269,451Q215,491,154,461Q93,431,63,372.5Q33,314,63.5,259Q94,204,100.5,144.5Q107,85,164,66.5Q221,48,280,51Q339,54,371,103Q403,152,415,201Q427,250,425.5,306Z;"></animate>
+            </path>
+        </svg>
+    </div>
+
+    <div class="how-it-works">
+        <h1>How the App Works</h1>
+        <div class="steps-container">
+            <!-- Step 1 -->
+            <div class="step">
+                <img src="/data/step-1.jpeg" alt="Step 1 Image">
+                <h3>Step 1</h3>
+                <p>Click on the Signin button.</p>
+            </div>
+            <!-- Step 2 -->
+            <div class="step">
+                <img src="/data/step-2.jpeg" alt="Step 2 Image">
+                <h3>Step 2</h3>
+                <p>Sign In through your google account.</p>
+            </div>
+                        <!-- Step 1 -->
+            <div class="step">
+                <img src="/data/step-3.jpeg" alt="Step 3 Image">
+                <h3>Step 3</h3>
+                <p>The camera will ask for permission. After that you can capture the image through center button. it capture an image of the object or scene around you.</p>
+            </div>
+            <!-- Step 2 -->
+            <div class="step">
+                <img src="/data/step-4.jpg" alt="Step 4 Image">
+                <h3>Step 4</h3>
+                <p>The leftmost button is to flip the camera. The rightmost button is to import image from gallery.</p>
+            </div>
+                        <!-- Step 1 -->
+            <div class="step">
+                <img src="/data/step-5.jpeg" alt="Step 5 Image">
+                <h3>Step 5</h3>
+                <p>After capturing the image a text box will be shown below in which you can ask questions regarding the image.</p>
+            </div>
+            <!-- Step 2 -->
+            <div class="step">
+                <img src="/data/step-6.jpeg" alt="Step 6 Image">
+                <h3>Step 6</h3>
+                <p>The processing time is approximately 1 mins, after which the response will stream in and can be read.</p>
+            </div>
+         
+        </div>
+        <a href="index.html" class="btn">Back to Home</a>
+    </div>
+</body>
+</html>
